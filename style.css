@@ -1,0 +1,104 @@
+.video-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-color: #0b4c5f;
+  gap: 20px;
+}
+
+.video-container .main-video-container {
+  flex: 1 1 700px;
+  border-radius: 5px;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #0b4c5f;
+  padding: 15px;
+}
+
+.video-container .main-video-container .main-video {
+  width: 100%;
+  margin-bottom: 7px;
+  border-radius: 5px;
+}
+
+.video-container .main-video-container .main-vid-title {
+  font-size: 20px;
+  color: #d8d8d8;
+}
+
+.video-container .video-list-container {
+  flex: 1 1 350px;
+  height: 485px;
+  overflow-y: scroll;
+  border-radius: 5px;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #0b4c5f;
+  padding: 15px;
+}
+
+.video-container .video-list-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.video-container .video-list-container::-webkit-scrollbar-track {
+  background-color: #0b4c5f;
+  border-radius: 5px;
+}
+
+.video-container .video-list-container::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+.video-container .video-list-container .list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.video-container .video-list-container .list.active {
+  background-color: #1793b2;
+}
+
+.video-container .video-list-container .list .list-video {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.video-container .video-list-container .list .list-title {
+  font-size: 17px;
+  color: #d8d8d8;
+}
+
+@media (max-width: 1200px) {
+  .video-container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .video-container .main-video-container .main-vid-title {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .video-container .video-list-container .list {
+    flex-flow: column;
+    gap: 10px;
+  }
+
+  .video-container .video-list-container .list .list-video {
+    width: 100%;
+  }
+
+  .video-container .video-list-container .list .list-title {
+    font-size: 15px;
+    text-align: center;
+  }
+}
